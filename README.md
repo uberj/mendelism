@@ -13,6 +13,8 @@ Terms
 * A chromosome is a string of alleles
 * Initially, every chromosome must have another chromosome of equal length
 
+See `mendelism/cell.py` for a full listing of terms from the textbook.
+
 Examples
 --------
 A mono hybrid self cross with one heterozygous gene.
