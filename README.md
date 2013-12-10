@@ -16,7 +16,7 @@ Terms
 Examples
 --------
 A mono hybrid self cross with one heterozygous gene.
-``
+```
 uberj $> python simulate.py X x
 Gamete Results
 --------------
@@ -35,10 +35,10 @@ PP:    0.2467
 pp:    0.2497
 Pp:    0.5036
 Sum of aggregate probabilities (lim n_trials -> inf == 1): 1.0
-``
+```
 
 A dihybrid self cross of a cell heterozygous for both seed color and seed shape. 100000 simulated breedings were done.
-``
+```
 uberj $> python simulate.py --num-trials 100000 YR yr
 Gamete Results
 --------------
@@ -68,12 +68,12 @@ YYrr:    0.0620955985
 YYRR:    0.0621055757
 YYRr:    0.1252288258
 Sum of aggregate probabilities: 1.0
-``
+```
 
 An example of simulating a cell with different length chromosomes. The cell
 was: heterozygous for seed color, seed shape, and flower position; homozygous
 dominant for pod color; homozygous recessive for stem length.
-``
+```
 uberj $> python simulate.py YR yr Gat GAt
 Gamete Results
 --------------
@@ -130,5 +130,5 @@ AayyttGGRr:    0.061799294872
 AayyttGGRR:    0.031358062414
 AayyttGGrr:    0.030738582714
 Sum of aggregate probabilities: 1.0
-``
+```
 
