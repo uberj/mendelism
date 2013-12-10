@@ -20,21 +20,21 @@ A mono hybrid self cross with one heterozygous gene.
 uberj $> python simulate.py X x
 Gamete Results
 --------------
-P:   0.5
-p:   0.5
+X:   0.5
+x:   0.5
 
 F2 Results
 -----------
-PP:   0.2467
-Pp:   0.5036
-pp:   0.2497
+XX:   0.2483
+Xx:   0.5018
+xx:   0.2499
 
 Aggregate Probabilities
 -----------------------
-PP:    0.2467
-pp:    0.2497
-Pp:    0.5036
-Sum of aggregate probabilities (lim n_trials -> inf == 1): 1.0
+xx:    0.2499
+XX:    0.2483
+Xx:    0.5018
+Sum of aggregate probabilities: 1.0
 ```
 
 A dihybrid self cross of a cell heterozygous for both seed color and seed shape. 100000 simulated breedings were done.
