@@ -1,5 +1,5 @@
-Exploring Miosis and Mendel's genetics.
----------------------------------------
+Exploring Meiosis and Mendel's genetics.
+----------------------------------------
 
 This is a dead simple simulator used for experimenting with what happens when
 you self cross a simple cell with itself. This work was inspired by the basic

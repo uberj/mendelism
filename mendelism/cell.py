@@ -71,7 +71,7 @@ class Cell(object):
         return genome
 
     def mieosis(self):
-        # Make a cell go through miosis
+        # Make a cell go through meiosis
         Cell.synthesize(self)
         self.state = 'M'
         Cell.prophase_1(self)
@@ -80,14 +80,14 @@ class Cell(object):
         Cell.telophase_1(self)
         cell1, cell2 = Cell.cytokinesis_1(self)
 
-        def miosis_2(cell):
+        def meiosis_2(cell):
             Cell.prophase_2(cell)
             Cell.metaphase_2(cell)
             Cell.anaphase_2(cell)
             Cell.telophase_2(cell)
             return Cell.cytokinesis_2(cell)
 
-        return itertools.chain(miosis_2(cell1), miosis_2(cell2))
+        return itertools.chain(meiosis_2(cell1), meiosis_2(cell2))
 
     @classmethod
     def synthesize(cls, cell):
