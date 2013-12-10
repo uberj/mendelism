@@ -201,6 +201,7 @@ def by_n(original_list, list_size=2):
         for i in xrange(0, len(original_list), list_size)
     ]
 
+
 def make_gamete(cell, g_results):
     gametes = list(cell.mieosis())
     # Record for debugging analysis
@@ -208,56 +209,3 @@ def make_gamete(cell, g_results):
         g_results.setdefault(cell.genome, 0)
         g_results[cell.genome] += 1
     return random.sample(gametes, 1)
-
-if __name__ == "__main__":
-#chr1 = sys.argv[1]
-#chr2 = sys.argv[2]
-
-    NUM_TRIALS = 10000
-    g_results = {}
-    f2_results = {}
-
-    def make_gamete(cell):
-        gametes = list(cell.mieosis())
-        # Record for analysis
-        for cell in gametes:
-            g_results.setdefault(cell.genome, 0)
-            g_results[cell.genome] += 1
-        return random.sample(gametes, 1)
-
-    for x in range(NUM_TRIALS):
-        cell1 = Cell([
-            Chromosome1('Xy'), Chromosome1('Xy'),
-            #Chromosome1('Z'), Chromosome1('z')
-        ])
-        cell2 = Cell([
-            Chromosome1('Xy'), Chromosome1('Xy'),
-            #Chromosome1('XZ'), Chromosome1('xz'),
-            #Chromosome1('Y'), Chromosome1('Wj')
-            #Chromosome1('X'), Chromosome1('x'),
-            #Chromosome1('YG'), Chromosome1('yg'),
-            #Chromosome1('Z'), Chromosome1('z')
-        ])
-        sperm, egg = make_gamete(cell1) + make_gamete(cell2)
-        zygote_dna = ''.join(
-            sorted(sperm.genome + egg.genome, key=lambda t: t.lower())
-        )
-        for gene in by_n(zygote_dna):
-            dna = ''.join(sorted(gene))
-            f2_results.setdefault(dna, 0)
-            f2_results[dna] += 1
-
-    def print_results(results):
-        for r, n in sorted(results):
-            print "%s:   %s" % (r, n)
-    print "Gamete Results"
-    print "--------------"
-    print_results(
-        [(i[0], i[1]/float(8 * NUM_TRIALS)) for i in g_results.items()]
-    )
-    print ""
-    print "F2 Results"
-    print "-----------"
-    print_results(
-        [(i[0], i[1]/float(NUM_TRIALS)) for i in f2_results.items()]
-    )
