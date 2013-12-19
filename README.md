@@ -134,3 +134,26 @@ AayyttGGrr:    0.030738582714
 Sum of aggregate probabilities: 1.0
 ```
 
+
+Punnet Squares
+--------------
+```
+uberj $> python cross.py PP Pp
+  P      p
+P PP     Pp
+P PP     Pp
+
+uberj $> python cross.py YyRr YyRr
+   YR       Yr       yR       yr
+YR RRYY     RrYY     RRYy     RrYy
+Yr rRYY     rrYY     rRYy     rrYy
+yR RRyY     RryY     RRyy     Rryy
+yr rRyY     rryY     rRyy     rryy
+
+uberj $> python cross.py YYRR Yyrr
+   Yr       Yr       yr       yr
+YR RrYY     RrYY     RrYy     RrYy
+YR RrYY     RrYY     RrYy     RrYy
+YR RrYY     RrYY     RrYy     RrYy
+YR RrYY     RrYY     RrYy     RrYy
+```
